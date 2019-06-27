@@ -73,7 +73,7 @@ songplay_table_create = ("""
 ## Dimension Tables
 user_table_create = ("""
     CREATE TABLE user_table (
-        user_id      int           PRIMARY KEY,
+        user_id      int              NOT NULL    PRIMARY KEY,
         first_name   varchar(255),
         last_name    varchar(255),
         gender       char(1),                 
@@ -83,7 +83,7 @@ user_table_create = ("""
 
 song_table_create = ("""
     CREATE TABLE song_table (
-        song_id     varchar(255)      PRIMARY KEY,
+        song_id     varchar(255)  NOT NULL    PRIMARY KEY,
         title       varchar(255),
         artist_id   varchar(255),
         year        int,
@@ -93,7 +93,7 @@ song_table_create = ("""
 
 artist_table_create = ("""
     CREATE TABLE artist_table(
-        artist_id   varchar(255)     PRIMARY KEY,
+        artist_id   varchar(255)  NOT NULL   PRIMARY KEY,
         name        varchar(255),
         location    varchar(255),
         latitude    double precision,
@@ -103,7 +103,7 @@ artist_table_create = ("""
 
 time_table_create = ("""
     CREATE TABLE time_table(
-        start_time  timestamp    PRIMARY KEY,
+        start_time  timestamp  NOT NULL  PRIMARY KEY,
         hour        int,       
         day         int,
         week        int,

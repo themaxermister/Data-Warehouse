@@ -53,7 +53,7 @@ This is to accommodate growing user base and song database belonging to Sparkify
 18. userId
 
 #### The image below is a screenshot of data in a log_data file:
-<img src="images/log_data_shot.png">
+<img src="images/log_data_shot.PNG">
 
 ### B. song_data files contain the following columns:
 1. artist_id

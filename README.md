@@ -90,7 +90,7 @@ The image below is a visual diagram of the tables included in the schema:
 
 ### Staging Tables: Prepares raw data to be transformed and loaded into schema
 
-#### staging_events_table
+#### a) staging_events_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -117,7 +117,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/staging_events_table.PNG">
 
-#### staging_songs_table
+#### b) staging_songs_table
 
 | col_name        | data_type | key     |
 |-----------------|-----------|---------|
@@ -156,7 +156,7 @@ The image below is a visual diagram of the tables included in the schema:
 
 ## Dimensional Tables: Contains context of business events recorded as attributes
 
-#### user_table
+#### a) user_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -169,7 +169,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/user_table.PNG">
 
-#### song_table
+#### b) song_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -182,7 +182,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/song_table.PNG">
 
-#### artist_table
+#### c) artist_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -195,7 +195,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/artist_table.PNG">
 
-#### time_table
+#### d) time_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|

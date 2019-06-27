@@ -20,7 +20,7 @@ time_table_drop = "DROP TABLE IF EXISTS time_table;"
 staging_events_table_create= ("""
     CREATE TABLE staging_events_table(
         id              int IDENTITY(0,1)   PRIMARY KEY,
-        artist          varchar(255),
+        artist varchar(255),
         auth            varchar(255),
         firstname       varchar(255),
         gender          char(1),
@@ -37,7 +37,7 @@ staging_events_table_create= ("""
         status          int,
         ts              bigint,
         useragent       varchar(255),        
-        userid          int                 
+        userid          int        
     );
 """)
 
@@ -60,42 +60,42 @@ staging_songs_table_create = ("""
 songplay_table_create = ("""
     CREATE TABLE songplay_table (
         songplay_id     int IDENTITY(0,1)    PRIMARY KEY,
-        start_time      timestamp               NOT NULL,
-        user_id         int                     NOT NULL,
-        level           varchar(255)            NOT NULL,
-        song_id         varchar(255)            NOT NULL,
-        artist_id       varchar(255)             NOT NULL,
-        session_id      varchar(255)             NOT NULL,
-        location        varchar(255)             NOT NULL,
-        user_agent      varchar(255)            NOT NULL
+        start_time      timestamp,
+        user_id         int,
+        level           varchar(255),
+        song_id         varchar(255),
+        artist_id       varchar(255),
+        session_id      varchar(255),
+        location        varchar(255),
+        user_agent      varchar(255)            
     );
 """)
 
 ## Dimension Tables
 user_table_create = ("""
     CREATE TABLE user_table (
-        user_id      int                     NOT NULL    PRIMARY KEY,
-        first_name   varchar(255)            NOT NULL,
-        last_name    varchar(255)            NOT NULL,
-        gender       char(1)                 NOT NULL,
-        level        varchar(255)            NOT NULL
+        user_id      int PRIMARY KEY,
+        first_name   varchar(255),
+        last_name    varchar(255),
+        gender       char(1),                 
+        level        varchar(255)            
     );
 """)
 
 song_table_create = ("""
     CREATE TABLE song_table (
-        song_id     varchar(255)         NOT NULL    PRIMARY KEY,
-        title       varchar(255)         NOT NULL,
-        artist_id   varchar(255)         NOT NULL,
-        year        int                  NOT NULL,
-        duration    double precision     NOT NULL
+        song_id     varchar(255)  PRIMARY KEY,
+        title       varchar(255),
+        artist_id   varchar(255),
+        year        int,
+        duration    double precision     
     );
 """)
 
 artist_table_create = ("""
     CREATE TABLE artist_table(
-        artist_id   varchar(255)         NOT NULL    PRIMARY KEY,
-        name        varchar(255)         NOT NULL,
+        artist_id   varchar(255)        PRIMARY KEY,
+        name        varchar(255),
         location    varchar(255),
         latitude    double precision,
         longitude   double precision               
@@ -104,13 +104,13 @@ artist_table_create = ("""
 
 time_table_create = ("""
     CREATE TABLE time_table(
-        start_time  timestamp   NOT NULL    PRIMARY KEY,
-        hour        int         NOT NULL,       
-        day         int         NOT NULL,
-        week        int         NOT NULL,
-        month       int         NOT NULL,
-        year        int         NOT NULL,
-        weekday     int         NOT NULL
+        start_time  timestamp       PRIMARY KEY,
+        hour        int,       
+        day         int,
+        week        int,
+        month       int,
+        year        int,
+        weekday     int
     );
 """)
 
@@ -162,7 +162,7 @@ user_table_insert = ("""
         gender,
         level
     FROM staging_events_table
-    WHERE auth='Logged In';
+    WHERE e.page = 'NextSong';
 """)
 
 song_table_insert = ("""

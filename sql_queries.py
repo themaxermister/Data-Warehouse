@@ -83,7 +83,7 @@ user_table_create = ("""
 
 song_table_create = ("""
     CREATE TABLE song_table (
-        song_id     varchar(255  PRIMARY KEY,
+        song_id     varchar(255)      PRIMARY KEY,
         title       varchar(255),
         artist_id   varchar(255),
         year        int,

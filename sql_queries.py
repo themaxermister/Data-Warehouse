@@ -19,8 +19,7 @@ time_table_drop = "DROP TABLE IF EXISTS time_table;"
 ## Staging Tables 
 staging_events_table_create= ("""
     CREATE TABLE staging_events_table(
-        id              int IDENTITY(0,1)   PRIMARY KEY,
-        artist varchar(255),
+        artist          varchar(255),
         auth            varchar(255),
         firstname       varchar(255),
         gender          char(1),
@@ -43,7 +42,7 @@ staging_events_table_create= ("""
 
 staging_songs_table_create = ("""
     CREATE TABLE staging_songs_table(
-        artist_id           varchar(255)           PRIMARY KEY,
+        artist_id           varchar(255),
         artist_latitude     double precision,
         artist_location     varchar(255),
         artist_longitude    double precision,
@@ -59,7 +58,7 @@ staging_songs_table_create = ("""
 ## Fact Table 
 songplay_table_create = ("""
     CREATE TABLE songplay_table (
-        songplay_id     int IDENTITY(0,1)    PRIMARY KEY,
+        songplay_id     int IDENTITY(0,1)  PRIMARY KEY,
         start_time      timestamp,
         user_id         int,
         level           varchar(255),
@@ -74,7 +73,7 @@ songplay_table_create = ("""
 ## Dimension Tables
 user_table_create = ("""
     CREATE TABLE user_table (
-        user_id      int PRIMARY KEY,
+        user_id      int           PRIMARY KEY,
         first_name   varchar(255),
         last_name    varchar(255),
         gender       char(1),                 
@@ -84,7 +83,7 @@ user_table_create = ("""
 
 song_table_create = ("""
     CREATE TABLE song_table (
-        song_id     varchar(255)  PRIMARY KEY,
+        song_id     varchar(255  PRIMARY KEY,
         title       varchar(255),
         artist_id   varchar(255),
         year        int,
@@ -94,7 +93,7 @@ song_table_create = ("""
 
 artist_table_create = ("""
     CREATE TABLE artist_table(
-        artist_id   varchar(255)        PRIMARY KEY,
+        artist_id   varchar(255)     PRIMARY KEY,
         name        varchar(255),
         location    varchar(255),
         latitude    double precision,
@@ -104,7 +103,7 @@ artist_table_create = ("""
 
 time_table_create = ("""
     CREATE TABLE time_table(
-        start_time  timestamp       PRIMARY KEY,
+        start_time  timestamp    PRIMARY KEY,
         hour        int,       
         day         int,
         week        int,

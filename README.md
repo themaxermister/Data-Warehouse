@@ -32,6 +32,8 @@ This is to accommodate growing user base and song database belonging to Sparkify
 
 # Data
 
+The dataset from Sparkify's S3 will be used.
+
 ### A. log_data files contain the following columns: 
 1. artist
 2. auth
@@ -67,7 +69,7 @@ This is to accommodate growing user base and song database belonging to Sparkify
 9. title
 10. year
 
-#### The image below is a screenshot of data in a song_data file
+#### The image below is a screenshot of data in a song_data file:
 <img src="images/song_data_shot.PNG">
 
 # Database Overview
@@ -84,11 +86,11 @@ The Star Schema will be used, where there will one fact table that is accompanie
 The image below is a visual diagram of the tables included in the schema:
 <img src="images/starSchema.PNG">
 
-## Database
+## Database Tables
 
-## Staging Tables: Prepares raw data to be transformed and loaded into schema
+### Staging Tables: Prepares raw data to be transformed and loaded into schema
 
-### staging_events_table
+#### staging_events_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -115,7 +117,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/staging_events_table.PNG">
 
-### staging_songs_table
+#### staging_songs_table
 
 | col_name        | data_type | key     |
 |-----------------|-----------|---------|
@@ -133,9 +135,9 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/staging_songs_table.PNG">
 
-## Fact Table: Contains business events recorded in quantifiable values
+### Fact Table: Contains business events recorded in quantifiable values
 
-### songplay_table
+#### songplay_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -154,8 +156,7 @@ The image below is a visual diagram of the tables included in the schema:
 
 ## Dimensional Tables: Contains context of business events recorded as attributes
 
-#### Sample:
-### user_table
+#### user_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -168,7 +169,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/user_table.PNG">
 
-### song_table
+#### song_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -181,7 +182,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/song_table.PNG">
 
-### artist_table
+#### artist_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|
@@ -194,7 +195,7 @@ The image below is a visual diagram of the tables included in the schema:
 #### Sample:
 <img src="images/artist_table.PNG">
 
-### time_table
+#### time_table
 
 | col_name      | data_type | key     | 
 |---------------|-----------|---------|

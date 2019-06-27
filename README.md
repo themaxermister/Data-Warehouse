@@ -53,7 +53,7 @@ This is to accommodate growing user base and song database belonging to Sparkify
 18. userId
 
 #### The image below is a screenshot of data in a log_data file:
-<img src="images/log_data_shot.png">
+<img src="images/log_data_shot.PNG">
 
 ### B. song_data files contain the following columns:
 1. artist_id
@@ -68,21 +68,21 @@ This is to accommodate growing user base and song database belonging to Sparkify
 10. year
 
 #### The image below is a screenshot of data in a song_data file
-<img src="images/song_data_shot.png">
+<img src="images/song_data_shot.PNG">
 
 # Database Overview
 
 ## PostgreSQL on Amazon
 
 #### The image below shows the Amazon data types available and their corresponsing PostgreSQL aliases:
-<img src="images/data_alias.png">
+<img src="images/data_alias.PNG">
 
 ## Data Warehouse Schema
 
 The Star Schema will be used, where there will one fact table that is accompanies with a set of dimensional tables. The schema can be easily understood by business users and is optimized for querying large data sets.
 
 The image below is a visual diagram of the tables included in the schema:
-<img src="images/starSchema.png">
+<img src="images/starSchema.PNG">
 
 ## Database
 
@@ -113,7 +113,7 @@ The image below is a visual diagram of the tables included in the schema:
 | userId        | int       | -       |
 
 #### Sample:
-<img src="images/staging_events_table.png">
+<img src="images/staging_events_table.PNG">
 
 ### staging_songs_table
 
@@ -131,7 +131,7 @@ The image below is a visual diagram of the tables included in the schema:
 | year            | int       | -       |
 
 #### Sample:
-<img src="images/staging_songs_table.png">
+<img src="images/staging_songs_table.PNG">
 
 ## Fact Table: Contains business events recorded in quantifiable values
 
@@ -150,7 +150,7 @@ The image below is a visual diagram of the tables included in the schema:
 | user_agent    | varchar   | -       |
 
 #### Sample:
-<img src="images/songplay_table.png">
+<img src="images/songplay_table.PNG">
 
 ## Dimensional Tables: Contains context of business events recorded as attributes
 
@@ -166,7 +166,7 @@ The image below is a visual diagram of the tables included in the schema:
 | level         | varchar   | -       |
 
 #### Sample:
-<img src="images/user_table.png">
+<img src="images/user_table.PNG">
 
 ### song_table
 
@@ -179,7 +179,7 @@ The image below is a visual diagram of the tables included in the schema:
 | duration      | double.P  | -       |
 
 #### Sample:
-<img src="images/song_table.png">
+<img src="images/song_table.PNG">
 
 ### artist_table
 
@@ -192,7 +192,7 @@ The image below is a visual diagram of the tables included in the schema:
 | longitude     | double.P  | -       |
 
 #### Sample:
-<img src="images/artist_table.png">
+<img src="images/artist_table.PNG">
 
 ### time_table
 
@@ -207,7 +207,7 @@ The image below is a visual diagram of the tables included in the schema:
 | weekday       | int       | -       |
 
 #### Sample:
-<img src="images/time_table.png">
+<img src="images/time_table.PNG">
 
 # Project Overview
 
